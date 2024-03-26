@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="755.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Update_computerController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <center>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="375.0" spacing="5.0">
+                     <children>
+                        <TextField fx:id="t_keyboard" promptText="Keyboard" />
+                        <TextField fx:id="t_subwoofer" promptText="Subwoofer" />
+                        <TextField fx:id="t_mouse" promptText="Mouse" />
+                        <TextField fx:id="t_ram" promptText="Ram" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="375.0" spacing="5.0">
+                     <children>
+                        <TextField fx:id="t_monitor" promptText="Monitor" />
+                        <TextField fx:id="t_cpu" promptText="Cpu" />
+                        <TextField fx:id="t_hdd" promptText="Hdd" />
+                        <TextField fx:id="t_motherboard" promptText="Motherboard" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </center>
+         <bottom>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextArea fx:id="computer_notes" prefHeight="200.0" prefWidth="200.0" />
+                  <Button fx:id="save_bu" mnemonicParsing="false" onAction="#update_com" text="Save changes" />
+               </children>
+            </VBox>
+         </bottom>
+         <top>
+            <VBox alignment="TOP_RIGHT" prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
+               <children>
+                  <CheckBox fx:id="check_move" mnemonicParsing="false" onAction="#check_action" text="Transfer" />
+                  <Label text="Transfer to :" />
+                  <HBox alignment="TOP_RIGHT" spacing="5.0">
+                     <children>
+                        <TextField fx:id="t_em_num" editable="false" prefHeight="31.0" prefWidth="70.0" />
+                        <Button fx:id="ref_but" mnemonicParsing="false" onAction="#refresh" prefHeight="25.0" prefWidth="40.0">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/icons8_available_updates_48px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <ComboBox fx:id="employee_list" editable="true" onAction="#get_id_for_selected_employee" prefHeight="31.0" prefWidth="150.0" />
+                     </children>
+                  </HBox>
+                  <TextField fx:id="t_id" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+                  <Button fx:id="new_bu" mnemonicParsing="false" onAction="#add_action" text="New Employee" />
+                  <Button fx:id="move_bu" mnemonicParsing="false" onAction="#move_ohda" prefHeight="25.0" prefWidth="80.0" text="Done">
+                     <VBox.margin>
+                        <Insets right="329.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

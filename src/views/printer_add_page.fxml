@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="755.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Printer_add_pageController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="755.0">
+         <center>
+            <HBox prefHeight="300.0" prefWidth="592.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="750.0" spacing="5.0">
+                     <children>
+                        <ComboBox fx:id="tp_type" editable="true" prefWidth="300.0" promptText="Printer name" />
+                        <ComboBox fx:id="tp_name" editable="true" prefWidth="300.0" promptText="Printer type" />
+                        <ComboBox fx:id="tp_health" editable="true" prefWidth="300.0" promptText="Printer health" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </center>
+         <bottom>
+            <TextArea fx:id="t_notes_printer" prefHeight="150.0" prefWidth="250.0" promptText="Notes" BorderPane.alignment="CENTER" />
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

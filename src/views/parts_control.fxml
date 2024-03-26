@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Parts_controlController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0">
+         <center>
+            <HBox alignment="CENTER" prefHeight="262.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="sent_table" prefHeight="274.0" prefWidth="625.0">
+                    <columns>
+                        <TableColumn fx:id="cs_date" prefWidth="75.0" text="Date" />
+                      <TableColumn fx:id="cs_notes" prefWidth="75.0" text="Notes" />
+                      <TableColumn fx:id="cs_count" prefWidth="75.0" text="Quantity" />
+                        <TableColumn fx:id="cs_name" prefWidth="75.0" text="Name" />
+                        <TableColumn fx:id="cs_type" prefWidth="75.0" text="Type" />
+                        <TableColumn fx:id="cs_num" prefWidth="75.0" text="Number" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <TableView fx:id="recived_table" prefHeight="387.0" prefWidth="625.0">
+                    <columns>
+                      <TableColumn fx:id="cr_date" prefWidth="75.0" text="Date" />
+                      <TableColumn fx:id="cr_count" prefWidth="75.0" text="Quantity" />
+                        <TableColumn fx:id="cr_name" prefWidth="75.0" text="Name" />
+                        <TableColumn fx:id="cr_type" prefWidth="75.0" text="Type" />
+                        <TableColumn fx:id="cr_num" prefWidth="75.0" text="Number" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </HBox>
+         </center>
+         <top>
+            <VBox alignment="TOP_RIGHT" BorderPane.alignment="TOP_RIGHT">
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <children>
+                  <HBox alignment="TOP_RIGHT" prefHeight="276.0" prefWidth="1200.0" spacing="140.0">
+                     <children>
+                        <VBox alignment="TOP_RIGHT" prefHeight="149.0" prefWidth="300.0" spacing="5.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="32.0" prefWidth="215.0">
+                                 <children>
+                                    <Label text="Employee equipments">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </VBox>
+                              <Label text="Type:" />
+                              <TextField fx:id="s_type" />
+                              <Label text="Name:" />
+                              <TextField fx:id="s_name" />
+                              <Label layoutX="273.0" layoutY="102.0" text="Quantity:" />
+                              <TextField fx:id="s_count" layoutX="10.0" layoutY="124.0" />
+                              <Label text="Recived date:" />
+                              <DatePicker fx:id="s_date" prefHeight="25.0" prefWidth="298.0" />
+                              <Label text="Notes:" />
+                              <TextArea fx:id="s_notes" prefHeight="48.0" prefWidth="215.0">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </TextArea>
+                              <Button fx:id="s_but" mnemonicParsing="false" onAction="#add_archive" prefWidth="70.0" text="Save" />
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </VBox>
+                        <TextArea fx:id="show_notes" nodeOrientation="RIGHT_TO_LEFT" prefHeight="276.0" prefWidth="300.0" promptText="Press any where in tables to show details">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </TextArea>
+                        <VBox alignment="TOP_RIGHT" prefHeight="149.0" prefWidth="300.0" spacing="5.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="32.0" prefWidth="215.0">
+                                 <children>
+                                    <Label text="Workshop equipment">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <Label text="Type:" />
+                              <TextField fx:id="r_type" nodeOrientation="RIGHT_TO_LEFT" />
+                              <Label text="Name:" />
+                              <TextField fx:id="r_name" nodeOrientation="RIGHT_TO_LEFT" />
+                              <Label text="Quantity:" />
+                              <TextField fx:id="r_count" />
+                              <Label text="Recived date:" />
+                              <DatePicker fx:id="r_date" prefHeight="25.0" prefWidth="297.0">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </DatePicker>
+                              <Button fx:id="r_but" mnemonicParsing="false" onAction="#add_part" prefHeight="25.0" prefWidth="70.0" text="Save" />
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="20.0" right="20.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="BOTTOM_RIGHT">
+                     <children>
+                        <TextField fx:id="s_search" alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="590.0" promptText="Search at employees" />
+                        <VBox alignment="TOP_RIGHT">
+                           <children>
+                              <Label text="Search:">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="r_search" alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="590.0" promptText="Search in workshop">
+                                 <VBox.margin>
+                                    <Insets left="1.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </VBox>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="755.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Computer_add_pageController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <center>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="375.0" spacing="5.0">
+                     <children>
+                        <ComboBox fx:id="t_keyboard" editable="true" prefHeight="25.0" prefWidth="220.0" promptText="keyboard" />
+                        <ComboBox fx:id="t_subwoofer" editable="true" layoutX="123.0" layoutY="38.0" prefHeight="25.0" prefWidth="220.0" promptText="subwoofer" />
+                        <ComboBox fx:id="t_mouse" editable="true" layoutX="123.0" layoutY="173.0" prefWidth="220.0" promptText="mouse" />
+                        <ComboBox fx:id="t_ram" editable="true" layoutX="123.0" layoutY="188.0" prefWidth="220.0" promptText="ram" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="375.0" spacing="5.0">
+                     <children>
+                        <ComboBox fx:id="t_monitor" editable="true" layoutX="123.0" layoutY="188.0" prefWidth="220.0" promptText="monitor" />
+                        <ComboBox fx:id="t_hdd" editable="true" layoutX="123.0" layoutY="158.0" prefWidth="220.0" promptText="hdd" />
+                        <ComboBox fx:id="t_cpu" editable="true" layoutX="123.0" layoutY="173.0" prefWidth="220.0" promptText="cpu" />
+                        <ComboBox fx:id="t_motherboard" editable="true" prefWidth="220.0" promptText="motherboard" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </center>
+         <bottom>
+            <TextArea fx:id="tc_notes" prefHeight="150.0" prefWidth="250.0" promptText="Notes" BorderPane.alignment="TOP_RIGHT" />
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

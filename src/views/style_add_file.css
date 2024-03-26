@@ -1,0 +1,17 @@
+*{
+    -fx-primary : #5E71C2;
+    -fx-secondary : #C0535D;
+    -fx-third : #FC888F;
+    -fx-background : #454655;
+    -fx-se-background : #A9AABC;
+}
+.root{
+    -fx-background-color: -fx-background;
+    -fx-font-size: 11pt;
+    
+    
+}
+.button{
+    background-color: #5E71C2;
+    
+}
